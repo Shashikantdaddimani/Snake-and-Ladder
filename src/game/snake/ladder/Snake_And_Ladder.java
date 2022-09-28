@@ -14,7 +14,23 @@ public class Snake_And_Ladder {
 		
 		int dice = random.nextInt(6)+1;
 		System.out.println("player rolls a die and get a random number is: "+dice);
-		
+		int option = random.nextInt(3);
+		switch(option)
+		{
+		case 0: System.out.println("No Play!!");
+				break;
+		case 1: System.out.println("Ladder!");
+				userPosition = userPosition + dice;
+				
+				break;
+		default: System.out.println("Snake!");
+				userPosition = userPosition - dice;
+				
+				if(userPosition<0)
+				{ userPosition = 0; 
+				}
+		}
+		System.out.println("Presnt Position of the User: "+userPosition);
 	}
 
 }
